@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kapt)
+//    id("kotlin-kapt")
 }
 
 
@@ -49,10 +51,12 @@ dependencies {
     implementation(libs.androidx.lifecycle.reactivestreams.ktx)
 
     implementation(libs.androidx.room.runtime)
-    annotationProcessor(libs.androidx.room.compiler)
-
+//    annotationProcessor(libs.androidx.room.compiler)
+//    kapt("androidx.room:room-compiler:${libs.versions.kaptVersion}")
+    kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.rxjava3)
+
 
 
     implementation (libs.picasso)

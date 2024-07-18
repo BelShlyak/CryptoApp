@@ -1,7 +1,7 @@
 [versions]
 adapterRxjava = "2.1.0"
 adapterRxjava2 = "2.9.0"
-agp = "8.5.0"
+agp = "8.5.1"
 converterGson = "2.11.0"
 daggerCompilerVersion = "2.51.1"
 gradle = "7.4.2"
@@ -27,8 +27,13 @@ roomRuntime = "2.6.1"
 rxandroid = "2.1.1"
 rxjava = "3.1.8"
 rxjavaVersion = "2.2.21"
+hiltVersion = "2.51.1"
+kaptVersion = "2.0.20-Beta2"
 
 [libraries]
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
+android-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
+
 adapter-rxjava = { module = "com.squareup.retrofit2:adapter-rxjava", version.ref = "adapterRxjava" }
 adapter-rxjava2 = { module = "com.jakewharton.retrofit2:adapter-rxjava2", version.ref = "adapterRxjava2" }
 adapter-rxjava3 = { module = "com.squareup.retrofit2:adapter-rxjava3", version.ref = "retrofit" }
@@ -69,6 +74,7 @@ rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
 rxjava2-rxjava = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxjavaVersion" }
 
 [plugins]
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
