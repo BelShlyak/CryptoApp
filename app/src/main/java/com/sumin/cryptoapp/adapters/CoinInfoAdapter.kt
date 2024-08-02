@@ -75,6 +75,3 @@ class CoinInfoAdapter(
 //interface OnCoinClickListener{
 //    fun onCoinClick(coinPriceInfo: CoinPriceInfo)
 //}
-
-
-//Не забудь разобраться со временем обновления. Прриложение показывает -3 часа.
